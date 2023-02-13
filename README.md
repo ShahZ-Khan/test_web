@@ -10,3 +10,6 @@ Creating a bubble chart that will display the following when an ID is selected f
 Gauge chart
 A gauge chart shows the 'weekly washing frequency' of the belly button value, and also the value as a measure from 0-10 on the progress bar in the gauge chart when an  ID is selected from the dropdown box menu.
 ![image]()<img width="407" alt="Screenshot 2023-02-13 at 1 49 02 PM" src="https://user-images.githubusercontent.com/114197558/218550383-82964e68-060a-4903-ad24-bbf5138d7e73.png">
+
+![image](<img width="1366" alt="Screenshot 2023-02-13 at 2 26 13 PM" src="https://user-images.githubusercontent.com/114197558/218556115-53393972-b3d9-46af-95cb-6b47259be8d6.png">
+)
