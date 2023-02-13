@@ -63,11 +63,11 @@ function buildCharts(sample) {
     // Deliverable 1: 3. Create a variable that holds the samples array. 
     var samples = data.samples;
     // Deliverable 1: 4. Create a variable that filters the samples for the object with the desired sample number.
-    var samplesArray = samples.filter(sampleObj => sampleObj.id == sample);
+    var resultsArray = samples.filter(sampleObj => sampleObj.id == sample);
     // Deliverable 3: 1. Create a variable that filters the metadata array for the object with the desired sample number.
 
     // Deliverable 1: 5. Create a variable that holds the first sample in the array.
-    var samplResult = samplesArray[0];
+    var samplResult = resultsArray[0];
     // Deliverable 3: 2. Create a variable that holds the first sample in the metadata array.
 
     // Deliverable 1: 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
@@ -94,9 +94,10 @@ function buildCharts(sample) {
     }];
 
     // Deliverable 1: 9. Create the layout for the bar chart. 
+   
     var barLayout = {
-      title: "Top 10 Bacteria Cultures Found"
-
+     title: "Top 10 Bacteria Cultures Found",
+     margin: { t: 30, l: 150 }
     };
 
     // Deliverable 1: 10. Use Plotly to plot the data with the layout. 
