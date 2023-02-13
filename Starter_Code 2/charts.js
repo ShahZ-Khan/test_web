@@ -58,7 +58,7 @@ function buildMetadata(sample) {
 function buildCharts(sample) {
   // Deliverable 1: 2. Use d3.json to load the samples.json file 
   d3.json("samples.json").then((data) => {
-    console.log(data);
+    //console.log(data);
 
     // Deliverable 1: 3. Create a variable that holds the samples array. 
     var samples = data.samples;
@@ -67,26 +67,27 @@ function buildCharts(sample) {
     // Deliverable 3: 1. Create a variable that filters the metadata array for the object with the desired sample number.
 
     // Deliverable 1: 5. Create a variable that holds the first sample in the array.
-    var samplResult = resultsArray[0];
+    var result = resultsArray[0];
     // Deliverable 3: 2. Create a variable that holds the first sample in the metadata array.
 
     // Deliverable 1: 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
-    var otuid = samplResult.otu_ids;
-    var otulab = samplResult.otu_labels;
-    var samplvals = samplResult.sample_values;
+    var otuid = result.otu_ids;
+    var otulab = result.otu_labels;
+    var samplvals = result.sample_values;
     // Deliverable 3: 3. Create a variable that holds the washing frequency.
 
 
     // Deliverable 1: 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order 
     // so the otu_ids with the most bacteria are last. 
-    var yticks = otuid.slice(0,10).map(id => "OTU" + id).reverse();
+   
+    var yticks = otuid.slice(0, 10).map(otuID => `OTU ${otuID}`).reverse();
 
     // Deliverable 1: 8. Create the trace for the bar chart. 
     var barData = [{
-      x: samplVals.slice(0,10).reverse(),
+      x: samplvals.slice(0,10).reverse(),
       y: yticks,
-      text: otuLabl.slice(0,10).reverse(),
+      text: otulab.slice(0,10).reverse(),
       type: "bar",
       orientation: "h",
       
